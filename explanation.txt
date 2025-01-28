@@ -1,0 +1,34 @@
+
+bubble_sort:
+    The top 5 functions used for bubble_sort are bubble_sort, operator[], size(), LESS_THAN, and quick_sort 
+    and the percentage of time spent in each function is 43.83, 31.58, 9.67, 5.59, and 4.73 respectively. 
+    I think that so much time was spent in bubble_sort is because the inner for loop runs until the limit is reached,
+    starting from zero. There is an outer for loop that also runs until the limit is reached. Therefore, the 
+    number of total iterations should be 900,000,000 (based on the number entered in this case).
+    The limit number entered was 30,000 which is a large number for the loop to run until.
+    I think that LESS_THAN is one of the other main functions that the time was spent in, is because LESS_THAN
+    is called within the inner for loop. The index operator is also used a lot in the if stmt inside of the inner
+    for loop as well as the expression for the if stmt. I believe that size() is called a lot because it 
+    is the first part of the expression in the outer for loop, and is checked every time the loop runs.
+
+
+selection_sort:
+    The top 5 functions used for selection_sort are selection_sort, operator[], LESS_THAN, size(), and quick_sort 
+    and the percentage of time spent in each function is 39.07, 32.96, 14.04, 9.16, and 4.88 respectively. 
+    The majority of time is spent in selection_sort because there is (again) the large while loop with a 
+    large for loop inside. The length of these loops depends on the number entered by the user which was
+    30,000 in this case. Again, the operator[] was used frequently because it is called frequently in the 
+    if stmt inside the for loop, and again in the stmt within the while loop that is used to call swap.
+
+
+quick_sort:
+    The top 5 functions used for quick_sort are quick_sort_sort, operator[], size(), LESS_THAN, and SWAP 
+    and the percentage of time spent in each function is 41.71, 25.03, 13.90, 11.12, and 5.56 respectively.
+    Out of the three sorting functions, quick_sort is definitely the quickest. It only has one long (based on input)
+    while loop that runs for the length of the data (3,000,000 in this case because 30,000 was too small to produce
+    clear times in the out.txt). Again, the index operator is called a lot within the function and while loop.
+
+The longest two sort functions are bubble_sort and selection_sort. This is because there are nested for and/or 
+while loops within the functions. Therefore, while quick_sort would only iterate for 30,000 times, the other two
+sort functions will be iterating for 900,000,000 (30,000 * 30,000). This is because for one iteration of the outer
+loop, the inner loop will complete 30,000 times
