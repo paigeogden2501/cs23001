@@ -1,0 +1,13 @@
+Hello world!
+This is 
+testing 
+the input operator.
+
+Hopefully 
+it 
+works!
+
+It is working
+
+131.123.47.176
+12
